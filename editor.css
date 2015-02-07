@@ -1,0 +1,45 @@
+ @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+treechildren::-moz-tree-checkbox {
+   list-style-image: none;
+}
+#enc {
+   width: 20px;
+}
+
+treechildren::-moz-tree-cell-text(bold) {
+   font-weight: bold;
+}
+
+treechildren::-moz-tree-checkbox(checked) {
+   list-style-image: url(encrypted16.png);
+   max-width: 16px;
+}
+
+treechildren::-moz-tree-image(iconic) {
+   max-width: 16px;
+   padding-right: 1ex;
+}
+treechildren::-moz-tree-image(Radio) {
+   list-style-image: url(radio16.png);
+}
+treechildren::-moz-tree-image(TV) {
+   list-style-image: url(tv16.png);
+}
+treechildren::-moz-tree-image(HDTV) {
+   list-style-image: url(hd16.png);
+}
+
+@media (min-resolution: 2dppx) {
+   treechildren::-moz-tree-checkbox(checked) {
+      list-style-image: url(encrypted32.png);
+   }
+   treechildren::-moz-tree-image(Radio) {
+      list-style-image: url(radio32.png);
+   }
+   treechildren::-moz-tree-image(TV) {
+      list-style-image: url(tv32.png);
+   }
+   treechildren::-moz-tree-image(HDTV) {
+      list-style-image: url(hd32.png);
+   }
+}

@@ -16,10 +16,12 @@ resources = [
     "locale/*/*.dtd",
     "locale/*/*.properties",
     "defaults/preferences/prefs.js",
-    "icon.png", "icon64.png",
+    "*.png",
+    "*.css",
+    "editor.js",
     "LICENSE.txt"
     ]
-destination = "extension.xpi"
+destination = "samchanedit.xpi"
 
 
 try:

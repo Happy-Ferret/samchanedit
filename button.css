@@ -1,0 +1,38 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#samchanedit-button {
+  list-style-image: url(icon16.png);
+}
+#samchanedit-button image {
+  max-width: 32px;
+}
+
+toolbar[iconsize="small"] #samchanedit-button {
+  list-style-image: url(icon16.png);
+  max-width: 16px;
+}
+toolbar[iconsize="small"] #samchanedit-button image {
+  max-width: 16px;
+}
+
+#samchanedit-button[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] #samchanedit-button {
+  list-style-image: url(icon64.png);
+}
+#samchanedit-button[cui-areatype="menu-panel"] image,
+toolbarpaletteitem[place="palette"] #samchanedit-button image {
+  max-width: 64px;
+}
+
+@media (min-resolution: 2dppx) {
+  #samchanedit-button {
+    list-style-image: url(icon64.png);
+  }
+  toolbar[iconsize="small"] #samchanedit-button {
+    list-style-image: url(icon.png);
+  }
+  #samchanedit-button[cui-areatype="menu-panel"],
+  toolbarpaletteitem[place="palette"] #samchanedit-button {
+    list-style-image: url(icon128.png);
+  }
+}

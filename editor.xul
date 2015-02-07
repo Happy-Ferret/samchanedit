@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://global/skin/toolbar.css" type="text/css"?>
+<?xml-stylesheet href="editor.css" type="text/css" ?>
+
+<window
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  id="samchanedit"
+  windowtype="samchanedit"
+  title="Samsung Channel Editor"
+  flex="1">
+  <html:link rel="icon" href="icon.png"/>
+  <commandset id="maincommandset">
+    <command id="cmdRemove" oncommand="Tree.remove();" />
+    <command id="cmdEdit"/>
+  </commandset>
+  <keyset id="mainkeyset">
+    <key id="kDel" keycode="VK_DELETE" command="cmdRemove" />
+    <key id="kDelMac" modifiers="meta" keycode="VK_BACK" command="cmdRemove" />
+
+    <key id="editAlt" keycode="VK_F2"/>
+  </keyset>
+  <hbox>
+    <button id="load" label="Load channel file"/>
+    <button id="save" label="Save channel file" disabled="true"/>
+    <separator flex="1"/>
+    <button id="removeEncrypted" label="Remove encrypted channels"/>
+    <separator flex="1"/>
+    <label id="channelNumber"/>
+  </hbox>
+  <tree flex="1" id="channels" seltype="multiple" editable="true">
+    <treecols>
+      <treecol id="no" ordinal="1" label="#" flex="2"/>
+      <splitter class="tree-splitter" />
+      <treecol id="name" ordinal="2" label="Name" flex="20" editable="true"/>
+      <splitter class="tree-splitter" />
+      <treecol id="type" ordinal="3" label="Type" flex="2"/>
+      <splitter class="tree-splitter" />
+      <treecol id="enc" ordinal="4" label="Encrypted" flex="1" type="checkbox"/>
+      <splitter class="tree-splitter" />
+      <treecol id="sid" ordinal="5" label="ServiceID" flex="2"/>
+      <splitter class="tree-splitter" />
+    </treecols>
+    <treechildren id="channelList"/>
+  </tree>
+
+  <script type="application/javascript" src="editor.js"/>
+</window>
+

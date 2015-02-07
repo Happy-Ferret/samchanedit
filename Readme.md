@@ -1,4 +1,6 @@
-Lightweight Extension SDK (miniSDK)
+Samsung Channel Editor
 ===
 
-This is my personal bootstrap to develop restartless but non-jetpack Mozilla extensions
+In a Firefox extension, because why not, it's cross-platform!
+
+Alpha only, supports on map-CableD (aka digital cable) setting.
